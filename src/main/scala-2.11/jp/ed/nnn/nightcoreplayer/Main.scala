@@ -52,6 +52,14 @@ class Main extends Application {
     primaryStage.show()
   }
 
-  private[this] def formatTime(elapsed: Duration, duration: Duration): String =  ???
+  private[this] def formatTime(elapsed: Duration, duration: Duration): String = {
+    "%02d:%02d:%02d/%02d:%02d:%02d".format(
+      elapsed.toHours.toInt,
+      elapsed.toMinutes.toInt % 60,
+      elapsed.toSeconds.toInt % 60,
+      duration.toHours.toInt,
+      duration.toMinutes.toInt % 60,
+      duration.toSeconds.toInt % 60)
+  }
 
 }
