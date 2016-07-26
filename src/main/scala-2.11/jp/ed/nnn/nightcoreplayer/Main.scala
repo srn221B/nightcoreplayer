@@ -2,6 +2,7 @@ package jp.ed.nnn.nightcoreplayer
 
 import java.io.File
 import javafx.application.Application
+import javafx.geometry.Pos
 import javafx.scene.Scene
 import javafx.scene.control.Label
 import javafx.scene.layout.{BorderPane, HBox}
@@ -26,10 +27,15 @@ class Main extends Application {
     mediaView.setFitHeight(450)
 
     val timeLabel = new Label()
+    timeLabel.setText("00:00:00/00:00:00")
+    timeLabel.setTextFill(Color.WHITE)
     val toolBar = new HBox(timeLabel)
+    toolBar.setAlignment(Pos.CENTER)
+    toolBar.setStyle("-fx-background-color: Black")
     val baseBorderPane = new BorderPane()
     baseBorderPane.setStyle("-fx-background-color: Black")
     baseBorderPane.setCenter(mediaView)
+    baseBorderPane.setBottom(toolBar)
     val scene = new Scene(baseBorderPane, 800, 450)
     scene.setFill(Color.BLACK)
     primaryStage.setScene(scene)
