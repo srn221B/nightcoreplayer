@@ -1,4 +1,4 @@
-package jp.ed.nnn.movieplayer
+package jp.ed.nnn.nightcoreplayer
 
 import javafx.scene.media.Media
 

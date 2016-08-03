@@ -16,8 +16,6 @@ import javafx.scene.paint.Color
 import javafx.stage.Stage
 import javafx.util.{Callback, Duration}
 
-import jp.ed.nnn.movieplayer.Movie
-
 object Main extends App {
   Application.launch(classOf[Main], args: _*)
 }
@@ -119,7 +117,7 @@ class Main extends Application {
               }
             })
           }
-      }
+        }
         event.consume()
       }
     })
@@ -130,7 +128,7 @@ class Main extends Application {
     primaryStage.show()
   }
 
-  private[this] def playMovie(movie: Movie,tableView: TableView[Movie], mediaView: MediaView, timeLabel: Label): Unit = {
+  private[this] def playMovie(movie: Movie, tableView: TableView[Movie], mediaView: MediaView, timeLabel: Label): Unit = {
     if (mediaView.getMediaPlayer != null) {
       val oldPlayer = mediaView.getMediaPlayer
       oldPlayer.stop()
