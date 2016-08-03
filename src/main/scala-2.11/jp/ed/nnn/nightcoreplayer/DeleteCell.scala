@@ -7,8 +7,6 @@ import javafx.scene.control.{Button, TableCell, TableView}
 import javafx.scene.layout.HBox
 import javafx.scene.media.MediaView
 
-import jp.ed.nnn.movieplayer.Movie
-
 class DeleteCell(movies: ObservableList[Movie], mediaView: MediaView, tableView: TableView[Movie]) extends TableCell[Movie, Long]() {
   val hBox = new HBox()
   hBox.setAlignment(Pos.CENTER)

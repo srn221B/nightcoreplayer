@@ -6,9 +6,6 @@ import javafx.event.EventHandler
 import javafx.scene.input.DragEvent
 import javafx.scene.media.{Media, MediaPlayer}
 
-import jp.ed.nnn.movieplayer.Movie
-
-
 class MovieFileDragDroppedEventHandler(movies: ObservableList[Movie]) extends EventHandler[DragEvent] {
   override def handle(event: DragEvent): Unit = {
     val db = event.getDragboard
