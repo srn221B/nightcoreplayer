@@ -46,7 +46,7 @@ class Main extends Application {
     baseBorderPane.setStyle("-fx-background-color: Black")
     baseBorderPane.setCenter(mediaView)
     baseBorderPane.setBottom(toolBar)
-    val scene = new Scene(baseBorderPane, 800, 450)
+    val scene = new Scene(baseBorderPane, 800, 500)
     scene.setFill(Color.BLACK)
     primaryStage.setScene(scene)
     primaryStage.show()
